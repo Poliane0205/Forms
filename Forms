@@ -1,3 +1,21 @@
+<html>
+<head>
+<title>Form da Poli</title>
+<script>
+function onlynumber(evt) {
+   var theEvent = evt || window.event;
+   var key = theEvent.keyCode || theEvent.which;
+   key = String.fromCharCode( key );
+   //var regex = /^[0-9.,]+$/;
+   var regex = /^[0-9.]+$/;
+   if( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+   }
+}
+</script>
+</head>
+<body>
 <form action="Processa dados" method="post">
     <div>
         <label for="nome">Nome:</label>
@@ -17,15 +35,15 @@
     </div> </BR></BR>
      <div>
         <label for="CEP">CEP:</label>
-        <input type="text" id="CEP" required maxlength="8">
+        <input type="text" maxlength="8" onkeypress="return onlynumber();">
     </div> </BR></BR>
     <div>
         <label for="CPF">CPF:</label>
-        <input type="text" id="CPF" required maxlength="11">
+        <input type="text" id="CPF" maxlength="11" onkeypress="return onlynumber();">
     </div> </BR></BR>
     <div>
         <label for="RG">RG:</label>
-        <input type="text" id="RG" required maxlength="9">
+        <input type="text" id="RG" maxlength="9" onkeypress="return onlynumber();">
     </div> </BR></BR>
     <div>
         <label for="msg">Mensagem:</label>
@@ -35,3 +53,6 @@
 	<button>Enviar</button>
     <div>
 </form>
+
+</body>
+</html>
