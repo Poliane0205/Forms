@@ -1,0 +1,37 @@
+<form action="Processa dados" method="post">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required maxlength="45">
+    </div> </BR></BR>
+    <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required maxlength="45">
+    </div> </BR></BR>
+    <div>
+        <label for="Data Nascimento">Data Nascimento:</label>
+        <input type="date" id="Data Nascimento" />
+    </div> </BR></BR>
+    <div>
+        <label for="endereço">Endereço:</label>
+        <input type="text" id="endereço" required maxlength="45" >
+    </div> </BR></BR>
+     <div>
+        <label for="CEP">CEP:</label>
+        <input type="text" id="CEP" required maxlength="8">
+    </div> </BR></BR>
+    <div>
+        <label for="CPF">CPF:</label>
+        <input type="text" id="CPF" required maxlength="11">
+    </div> </BR></BR>
+    <div>
+        <label for="RG">RG:</label>
+        <input type="text" id="RG" required maxlength="9">
+    </div> </BR></BR>
+    <div>
+        <label for="msg">Mensagem:</label>
+        <textarea id="msg"></textarea>
+    </div> </BR></BR>
+	<button>Limpar</button> </br>
+	<button>Enviar</button>
+    <div>
+</form>
